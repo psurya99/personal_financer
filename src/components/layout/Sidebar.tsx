@@ -1,9 +1,9 @@
 import React from 'react';
-import { LayoutDashboard, Receipt, LineChart, TrendingUp, Settings } from 'lucide-react';
+import { LayoutDashboard, Receipt, LineChart, TrendingUp, Settings, Info } from 'lucide-react';
 import { cn } from '../../utils/cn';
 import { useUser } from '../../context/UserContext';
 
-export type View = 'dashboard' | 'expenses' | 'advisor' | 'settings';
+export type View = 'dashboard' | 'expenses' | 'advisor' | 'settings' | 'about';
 
 interface SidebarProps {
     currentView: View;
@@ -19,6 +19,7 @@ export function Sidebar({ currentView, onViewChange, className }: SidebarProps) 
         { id: 'expenses', label: 'Expenses', icon: Receipt },
         { id: 'advisor', label: 'Financial Advisor', icon: TrendingUp },
         { id: 'settings', label: 'Settings', icon: Settings },
+        { id: 'about', label: 'About & Docs', icon: Info },
     ] as const;
 
     return (

@@ -5,6 +5,7 @@ import { DashboardView } from './components/dashboard/DashboardView';
 import { ExpensesView } from './components/expenses/ExpensesView';
 import { AdvisorView } from './components/advisor/AdvisorView';
 import { SettingsView } from './components/settings/SettingsView';
+import { AboutView } from './components/about/AboutView';
 import { CurrencyProvider } from './context/CurrencyContext';
 import { UserProvider } from './context/UserContext';
 import { RegistrationModal } from './components/auth/RegistrationModal';
@@ -22,6 +23,8 @@ function App() {
                 return <AdvisorView />;
             case 'settings':
                 return <SettingsView />;
+            case 'about':
+                return <AboutView />;
             default:
                 return <DashboardView />;
         }
